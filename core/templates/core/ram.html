@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--CSS-->
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'core/css/diseño_ram.css' %}">
+
+
+
+    <title>Computec v.1</title>
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'core/img/logo/logo_2_prueba_reducido_v2.png' %}" alt="LOGO_COMPUTEC">
+                </a>
+            </div>
+
+            <div class="navegacion">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'home' %}">Inicio </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'noticias' %}">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'quienessomos' %}">Quienes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'api' %}">Mantente Informado MS </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="contenedor">
+            <div class="row">
+                <h2 class="ttl_cont">Memorias RAM</h2>
+            </div>
+            <div class="row">
+                <div class="lateral_1 col-md-6 col-sm-12">
+                    <h2>HyperX y MSI Baten record Mundial</h2>
+                    <h4>Memorias DDR4</h4>
+                    <h6>El pasado récord de velocidad de memorias DDR4 se encontraba en 7.004 MHz, sin embargo, apenas ha durado unos meses, ya que HyperX, la división gaming de HP (antes de Kingston), acaba de anunciar que sus módulos HyperX Predator de
+                        8 GB a 4.600 MHz han conseguido llegar a los 7.156,4 MHz mediante refrigeración extrema.</h6>
+                    <img src="{% static 'core/img/RAM/ram_ddr4.jpg' %}" alt="RAM DDR4" />
+                </div>
+                <div class="lateral_2 col-md-6 col-sm-12">
+                    <img src="{% static 'core/img/RAM/ram_ddr5.png' %}" alt="RAM DDR5" />
+                    <h3>RAM DDR5 de 512 GB</h3>
+                    <h4>Memorias DDR5</h4>
+                    <h6>Si, no nos hemos equivocado en el titular, 512 GB de capacidad es lo que promete Samsung en sus nuevos módulos de memoria RAM DDR5, una capacidad que iguala e incluso supera a muchos SSD en capacidad, pero con unas velocidades muy
+                        superiores de hasta 7.200 megabits por segundo, el doble que la memoria DDR4.</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="lateral_3 col-md-6 col-sm-12">
+                    <h2>Corsair amplía la compatibilidad</h2>
+                    <h4>Memorias RAM</h4>
+                    <h6>Corsair añade las memorias RAM Vengeance RGB PRO SL, unas memorias que conservan en mayor medida el diseño que les ha dado el éxito pero consiguen recortar su altura hasta los 44mm, de modo que perdiendo estos 11mm de altura respecto
+                        a las memorias normales, son capaces de introducirse bajo los disipadores de aire más potentes del mercado.</h6>
+                    <img src="{% static 'core/img/RAM/memorias_ram.png' %}" alt="Memorias RAM" />
+                </div>
+                <div class="lateral_4 col-md-6 col-sm-12">
+                    <img src="{% static 'core/img/RAM/memorias_ram2.png' %}" alt="Memorias RAM 2" />
+                    <h2>HyperX Kits</h2>
+                    <h4>Kits de 64GB en DDR4</h4>
+                    <h6>La marca gaming de componentes Hyper X, de Kingston, ha anunciado la ampliación de su catálogo de memorias RAM DDR4 de la serie HyperX Fury DDR4 RGB con la adición de nuevos módulos que amplían la capacidad de los kits hasta los 64
+                        GB y con velocidades que van desde los 2.400 MHz hasta los 3.600 MHz.</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="lateral_5 col-md-6 col-sm-12">
+                    <h2>Thermaltake ToughRAM XG RGB</h2>
+                    <h4>Memorias RAM</h4>
+                    <h6>Thermaltake ha anunciado el lanzamiento de sus nuevos módulos de memoria RAM DDR4 ThoughRAM XG RGB con velocidades de hasta 4.600 MHz y dotados de un llamativo sistema de iluminación ARGB de tres zonas que separan la iluminación en
+                        dos partes superiores y una central más pequeña, diferenciándolos de los modelos ToughRAM anteriores.</h6>
+                    <img src="{% static 'core/img/RAM/memorias_ram3.png' %}" alt="Memorias RAM 3" />
+                </div>
+                <div class="lateral_6 col-md-6 col-sm-12">
+                    <img src="{% static 'core/img/RAM/memorias_ram2.png' %}" alt="Memorias RAM 2" />
+                    <h2>Nuevas memorias Corsair Vengeance RGB PRO SL</h2>
+                    <h4>Memorias RAM</h4>
+                    <h6>Llegan con un diseño de PCB negro con un disipador metálico blanco o negro donde se integra un sistema de iluminación Addresable RGB o RGB direccionable. En cuanto su velocidad, los kits están disponibles inicialmente con frecuencias
+                        de hasta 3.600 MHz, mientras que la capacidad máxima es de 32 GB por módulo con kits de 4 módulos, es decir, 128 GB por kit.</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h6>© Copyright 2020 - 2021, Todos los derechos reservados. Diseñada por Computec para web y mobile.
+        </h6>
+        <section>
+            <h4>Siguenos</h4>
+            <div class="foot_follow">
+                <button type="button" class="btn btn-outline-danger" onclick="location='https://www.Instagram.com'">Instagram</button>
+                <button type="button" class="btn btn-outline-danger" onclick="location='https://www.facebook.com'">Facebook</button>
+
+            </div>
+
+        </section>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

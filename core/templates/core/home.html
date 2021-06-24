@@ -1,0 +1,119 @@
+{% extends 'core/base.html' %} 
+
+{% load static %} 
+
+
+{% block contenido %}
+
+<body>
+
+    <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <a href="{% url 'rtx2080' %}">
+                        <img class="d-block w-100" src="{% static 'core/img/Tarjetas_Nvidia/RTX2080TI.png' %}" alt="First slide">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Review Nvidia RTX2080TI</h3>
+                        <p>Un modelo que nos ofrece todo el potencial de la arquitectura Turing para que los juegos más exigentes vayan más fluidos que nunca...</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="{% url 'rx5700' %}">
+
+                        <img class="d-block w-100" src="{% static 'core/img/Tarjetas_AMD/rx-5700.xt.png' %}" alt="Second slide">
+                    </a>
+
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>AMD Radeon RX 5700 XT</h3>
+                        <p>¿Superará en rendimiento a la RTX 2070? Esto es lo que esperamos de esta AMD RX 5700 XT, aunque sin RT ni DLSS. Así que sin más ¡Comencemos!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="{% url 'hyperxexo' %}">
+                        <img class="d-block w-100" src="{% static 'core/img/Disco_duro/Hyper-xexterno_1.png' %}" alt="forth slide">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Exo</h3>
+                        <p>HyperX Savage Exo, un disco duro de estado sólido que funciona con consolas.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+        </div>
+    </div>
+    <div class="componentes">
+        <div class="row">
+            <div class="Procesador col-md-4">
+
+                <a href="{% url 'proce' %}">
+                    <h5>PROCESADORES</h5>
+                    <img src="{% static 'core/img/Procesadores/Ryzen-5-3600X.png' %}" alt="proce">
+                </a>
+            </div>
+            <div class="grafica col-md-4">
+                <a href="{% url 'grafica' %}">
+                    <h5>GRAFICAS</h5>
+                    <img src="{% static 'core/img/Tarjetas_Nvidia/tarjetas_graficas_2.png' %}" alt="grafica">
+
+                </a>
+            </div>
+            <div class="Ram col-md-4">
+                <a href="{% url 'ram' %}">
+                    <h5>RAMS</h5>
+                    <img src="{% static 'core/img/RAM/ram_ddr4.jpg' %}" alt="ram">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="contenedor-inferior">
+        <div class="row">
+            <div class="lateral_1 col-md-7 col-sm-12">
+                <h1>SERIE 30 RTX</h1>
+                <h4>LA JUGADA DEFINITIVA</h4>
+                <p>Las tarjetas gráficas GeForce RTX Serie 30 cuentan con Ampere, la arquitectura de segunda generación de NVIDIA RTX, Núcleos Ray Tracing de 2.ª generación y Núcleos Tensor de 3.ª generación más rápidos y nuevos multiprocesadores de transmisión
+                    para ofrecer imágenes asombrosas, frecuencias de cuadros más rápidas y aceleración con IA a los jugadores y los creadores. </p>
+                <br>
+                <p>Por supuesto, las GPUs GeForce RTX Serie 30 incluyen nuevas tecnologías para los competidores de eSports, las personas que transmiten contenido en vivo, los creadores y los gamers. NVIDIA Reflex reduce la latencia del sistema, lo que permite
+                    proporcionar una capacidad de respuesta de PC en una fracción de segundo para eSports y juegos competitivos.</p>
+                <br>
+                <p>Lleva tus proyectos creativos a un nuevo nivel con las GPUs GeForce RTX Serie 30. Ofreciendo aceleración de IA en las mejores aplicaciones creativas. Gracias a la plataforma NVIDIA Studio dedicada a los drivers y herramientas exclusivas.
+                    Se desarrolló para brindar rendimiento en tiempo récord. Ya sea que estés renderizando complejas escenas 3D, editando videos en 8K o transmitiendo en vivo con la mejor codificación y calidad de imagen, las GPU GeForce RTX te brindan
+                    la renderización para crear lo mejor.</p>
+                <img src="{% static 'core/img/Tarjetas_Nvidia/RTX-3090.png' %}" alt="Nvidia 3090" />
+            </div>
+            <div class="lateral_2 col-md-5 col-sm-12">
+                <img src="{% static 'core/img/Tarjetas_AMD/Readon.-6900xtwebp.png' %}" alt="Readon 6900" />
+                <h1>AMD Radeon RX6000 Series</h1>
+                <h4>RENDIMIENTO FENOMENAL</h4>
+                <p>El diseño y la ingeniería vanguardistas de la serie AMD Radeon RX 6000 permiten que esta familia ofrezca velocidades de cuadros ultraaltas. Las nuevas y potentes unidades de procesamiento junto con la flamante tecnología AMD Infinity Cache
+                    y una enorme cantidad de memoria GDDR6 te permiten vivir la mejor experiencia de juego.
+                    <br>
+                    <p>Diseñadas con la arquitectura AMD RDNA™ 2, las tarjetas gráficas Radeon™ RX serie 6000 están pensadas para ofrecer nuevos niveles de eficiencia energética, rendimiento y prestaciones.</p>
+                    <br>
+                    <p>La tarjeta gráfica AMD Radeon™ serie RX 6000 te teletransporta a la acción con las últimas tecnologías visuales, como DirectX® 12 Ultimate y AMD FidelityFX, para que disfrutes luces, sombras y reflejos realistas, además de nuevos niveles
+                        de detalle.</p>
+
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}

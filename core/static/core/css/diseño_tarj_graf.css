@@ -1,0 +1,133 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+
+/* Cabecera */
+
+.header {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+
+.navegacion li a {
+    margin-top: 18px;
+    color: rgb(209, 171, 47);
+}
+
+
+/* Cuerpo */
+
+.ttl_cont {
+    color: red;
+    font-size: 75px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.lateral_1,
+.lateral_2,
+.lateral_3,
+.lateral_4,
+.lateral_5,
+.lateral_6 {
+    display: table-row-group;
+    text-align: justify;
+    padding: 30px;
+    background-color: rgb(0, 0, 0);
+    font-family: verdana;
+}
+
+p {
+    color: white;
+}
+
+h1 {
+    font-family: Arial;
+    color: rgb(129, 41, 163);
+}
+
+h2 {
+    font-family: Arial;
+    color: rgb(129, 41, 163);
+}
+
+h3 {
+    font-family: Arial;
+    color: rgb(129, 41, 163);
+}
+
+h4 {
+    font-family: monospace;
+    color: rgb(72, 24, 104);
+}
+
+h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+
+.lateral_1 img,
+.lateral_3 img,
+.lateral_5 img {
+    width: 70%;
+}
+
+.lateral_2 img,
+.lateral_4 img,
+.lateral_6 img {
+    width: 70%;
+}
+
+.contenedor {
+    display: table-row-group;
+}
+
+
+/* Pie de Pagina */
+
+.footer h4 {
+    color: whitesmoke;
+    padding: 5px;
+}
+
+.footer {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 60px;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 1000px) {
+    .header {
+        flex-direction: column;
+    }
+    .lateral_1 img,
+    .lateral_3 img,
+    .lateral_5 img {
+        width: 50%;
+    }
+    .footer {
+        display: none;
+    }
+}

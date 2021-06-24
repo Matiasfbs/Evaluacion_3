@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.header {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+}
+
+.lateral_1,
+.lateral_2 {
+    text-align: justify;
+    padding: 30px;
+    background-color: rgb(0, 0, 0);
+    font-family: verdana;
+}
+
+.lateral_1 img {
+    width: 100%;
+}
+
+.lateral_2 img {
+    width: 100%;
+}
+
+.contenedor-inferior {
+    display: flex;
+}
+
+p {
+    color: white
+}
+
+h1 {
+    color: white
+}
+
+h5 {
+    color: white
+}
+
+h6 {
+    color: white
+}
+
+h4 {
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    background-color: black;
+}
+
+@media screen and (max-width: 800px) {
+    .header {
+        flex-direction: column;
+    }
+    .footer {
+        display: none;
+    }
+}
