@@ -5,6 +5,18 @@ from django.contrib.auth.decorators import login_required, permission_required
 from .models import Hardware
 from .forms import HardwareForm
 
+# las importaciones para la API 
+from rest_framework import generics
+from .serializers import HardwareSerializer
+
+# Importaciones para TOKEN
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
+from django.conf import settings
+# from django.contrib.auth.models import User
+
+
 
 
 # Create your views here.
@@ -55,6 +67,11 @@ def grafica(request):
 def ram(request):
     return render(request, 'core/ram.html')
 
+
+
+
+# ---------------------------- CRUD ---------------------------------------------
+
 def listado_hardware(request):
 
     hardwares = Hardware.objects.all()
@@ -101,4 +118,29 @@ def eliminar_hardware(request, id):
     hardware.delete()
     return redirect('listado_hardwares')
 
+
+# ---------------------------------- API ------------------------------------------------------
+
+
+class API_objects(generics.ListCreateAPIView):           #<<<  capacidad de hacer un select y un insert listar y crear
+    queryset = Hardware.objects.all()
+    serializer_class = HardwareSerializer
+    
+class API_objects_details(generics.RetrieveUpdateDestroyAPIView):    #<<<  modificacion y eliminacion del registro
+    queryset = Hardware.objects.all()
+    serializer_class = HardwareSerializer
+
+#----------------------------- TOKEN ------------------------------------------------
+
+# @receiver(post_save, sender=User)
+# def create_auth_token(sender, instance=None, created=False, **kwargs):
+#     if created:
+#         Token.objects.create(user=instance)
+        
+# Este código se activa cada vez que se 
+# crea un nuevo usuario y se guarda en la base de datos.
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_auth_token(sender, instance=None, created=False, **kwargs):
+    if created:
+        Token.objects.create(user=instance)
 
